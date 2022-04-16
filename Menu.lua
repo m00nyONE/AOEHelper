@@ -12,7 +12,7 @@ function AOEHelper.createAddonMenu()
         displayName = "AOEHelper",
         author = "|cFFC0CBm00ny|r",
         version = AOEHelper.version,
-        website = "https://github.com/m00nyONE/AOEHelper",
+        website = "https://www.esoui.com/downloads/fileinfo.php?id=3342",
         feedback = "https://github.com/m00nyONE/AOEHelper",
         donation = AOEHelper.donate,
         slashCommand = "/aoesettings",

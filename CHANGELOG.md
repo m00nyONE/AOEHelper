@@ -1,2 +1,2 @@
 ## 1.0.0
-adding translations
+adding translations for english and german
