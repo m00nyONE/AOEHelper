@@ -13,7 +13,7 @@ function AOEHelper.createAddonMenu()
         author = "|cFFC0CBm00ny|r",
         version = AOEHelper.version,
         website = "https://github.com/m00nyONE/AOEHelper",
-        feedback = "",
+        feedback = "https://github.com/m00nyONE/AOEHelper",
         donation = AOEHelper.donate,
         slashCommand = "/aoesettings",
         registerForRefresh = true,
@@ -33,8 +33,8 @@ function AOEHelper.createAddonMenu()
         },
         [3] = {
             type = "colorpicker",
-            name = GetString(AOEHELPER_MENU_GENERAL_ENEMY_COLOR),
-            tooltip = "The color of the AoEs that come from enemys",
+            name = GetString(AOEHELPER_MENU_GENERAL_ENEMY_COLOR_TEXT),
+            tooltip = GetString(AOEHELPER_MENU_GENERAL_ENEMY_COLOR_TOOLTIP),
 			getFunc = function()
 				local c = AOEHelper.GetGameColors().enemyColor
 				return tonumber("0x" .. c:sub(1, 2)) / 255, tonumber("0x" .. c:sub(3, 4)) / 255, tonumber("0x" .. c:sub(5, 6)) / 255
@@ -48,8 +48,8 @@ function AOEHelper.createAddonMenu()
 		},
         [4] = {
             type = "slider",
-            name = GetString(AOEHELPER_MENU_GENERAL_ENEMY_BRIGHTNESS),
-            tooltip = "the brightness of the AoEs that come from enemys",
+            name = GetString(AOEHELPER_MENU_GENERAL_ENEMY_BRIGHTNESS_TEXT),
+            tooltip = GetString(AOEHELPER_MENU_GENERAL_ENEMY_BRIGHTNESS_TOOLTIP),
             getFunc = function() return GetSetting(SETTING_TYPE_COMBAT, COMBAT_SETTING_MONSTER_TELLS_ENEMY_BRIGHTNESS) end,
             setFunc = function(value) SetSetting(SETTING_TYPE_COMBAT, COMBAT_SETTING_MONSTER_TELLS_ENEMY_BRIGHTNESS, value) end,
             clampInput = false,
@@ -62,8 +62,8 @@ function AOEHelper.createAddonMenu()
         },
         [5] = {
             type = "colorpicker",
-            name = GetString(AOEHELPER_MENU_GENERAL_ALLY_COLOR),
-            tooltip = "The color of the AoEs that come from friendlies",
+            name = GetString(AOEHELPER_MENU_GENERAL_ALLY_COLOR_TEXT),
+            tooltip = GetString(AOEHELPER_MENU_GENERAL_ALLY_COLOR_TOOLTIP),
 			getFunc = function()
 				local c = AOEHelper.GetGameColors().friendlyColor
 				return tonumber("0x" .. c:sub(1, 2)) / 255, tonumber("0x" .. c:sub(3, 4)) / 255, tonumber("0x" .. c:sub(5, 6)) / 255
@@ -77,8 +77,8 @@ function AOEHelper.createAddonMenu()
 		},
         [6] = {
             type = "slider",
-            name = GetString(AOEHELPER_MENU_GENERAL_ALLY_BRIGHTNESS),
-            tooltip = "the brightness of the AoEs that come from friendlies",
+            name = GetString(AOEHELPER_MENU_GENERAL_ALLY_BRIGHTNESS_TEXT),
+            tooltip = GetString(AOEHELPER_MENU_GENERAL_ALLY_BRIGHTNESS_TOOLTIP),
             getFunc = function() return GetSetting(SETTING_TYPE_COMBAT, COMBAT_SETTING_MONSTER_TELLS_FRIENDLY_BRIGHTNESS) end,
             setFunc = function(value) SetSetting(SETTING_TYPE_COMBAT, COMBAT_SETTING_MONSTER_TELLS_FRIENDLY_BRIGHTNESS, value) end,
             width = "half",
@@ -93,8 +93,8 @@ function AOEHelper.createAddonMenu()
         },
         [8] = {
             type = "button",
-            name = "set for current Zone",
-            tooltip = "set color for the current Zone you are in",
+            name = GetString(AOEHELPER_MENU_GENERAL_BUTTON_SETFORCURRENTZONE_TEXT),
+            tooltip = GetString(AOEHELPER_MENU_GENERAL_BUTTON_SETFORCURRENTZONE_TOOLTIP),
             func = function()
                 local zoneID = GetZoneId(GetUnitZoneIndex("player"))
                 AOEHelper.SetZoneColors(zoneID, AOEHelper.GetGameColors())
@@ -104,8 +104,8 @@ function AOEHelper.createAddonMenu()
         },
         [9] = {
             type = "button",
-            name = "reset",
-            tooltip = "set color for current Zone",
+            name = GetString(AOEHELPER_MENU_GENERAL_BUTTON_RESET_TEXT),
+            tooltip = GetString(AOEHELPER_MENU_GENERAL_BUTTON_RESET_TOOLTIP),
             func = function()
                 AOEHelper.SetGameColors(AOEHelper.savedVariables.defaultColors)
             end,
@@ -114,14 +114,14 @@ function AOEHelper.createAddonMenu()
 
         [10] = {
             type = "submenu",
-            name = function() return "current zone colors (" .. AOEHelper.filterName(GetUnitZone("player")) .. ")"  end,
-            tooltip = "Colors for this Zone",
+            name = zo_strformat(GetString(AOEHELPER_MENU_CURRENTZONE_SUBMENU_TEXT),AOEHelper.filterName(GetUnitZone("player"))),
+            tooltip = GetString(AOEHELPER_MENU_CURRENTZONE_SUBMENU_TOOLTIP),
             disabled = function() if AOEHelper.savedVariables.savedZones[GetZoneId(GetUnitZoneIndex("player"))] == nil then return true end return false end,
             controls = {
                 [1] = {
                     type = "colorpicker",
-                    name = GetString(AOEHELPER_MENU_GENERAL_ENEMY_COLOR),
-                    tooltip = "The color of the AoEs that come from enemys",
+                    name = GetString(AOEHELPER_MENU_GENERAL_ENEMY_COLOR_TEXT),
+                    tooltip = GetString(AOEHELPER_MENU_GENERAL_ENEMY_COLOR_TOOLTIP),
                     getFunc = function()
                         if AOEHelper.savedVariables.savedZones[GetZoneId(GetUnitZoneIndex("player"))] ~= nil then
                             local c = AOEHelper.savedVariables.savedZones[GetZoneId(GetUnitZoneIndex("player"))].enemyColor
@@ -138,8 +138,8 @@ function AOEHelper.createAddonMenu()
                 },
                 [2] = {
                     type = "slider",
-                    name = GetString(AOEHELPER_MENU_GENERAL_ENEMY_BRIGHTNESS),
-                    tooltip = "the brightness of the AoEs that come from enemys",
+                    name = GetString(AOEHELPER_MENU_GENERAL_ENEMY_BRIGHTNESS_TEXT),
+                    tooltip = GetString(AOEHELPER_MENU_GENERAL_ENEMY_BRIGHTNESS_TOOLTIP),
                     getFunc = function() 
                         if AOEHelper.savedVariables.savedZones[GetZoneId(GetUnitZoneIndex("player"))] ~= nil then
                             return AOEHelper.savedVariables.savedZones[GetZoneId(GetUnitZoneIndex("player"))].enemyBrightness
@@ -159,8 +159,8 @@ function AOEHelper.createAddonMenu()
                 },
                 [3] = {
                     type = "colorpicker",
-                    name = GetString(AOEHELPER_MENU_GENERAL_ALLY_COLOR),
-                    tooltip = "The color of the AoEs that come from friendlies",
+                    name = GetString(AOEHELPER_MENU_GENERAL_ALLY_COLOR_TEXT),
+                    tooltip = GetString(AOEHELPER_MENU_GENERAL_ALLY_COLOR_TOOLTIP),
                     getFunc = function()
                         if AOEHelper.savedVariables.savedZones[GetZoneId(GetUnitZoneIndex("player"))] ~= nil then
                             local c = AOEHelper.savedVariables.savedZones[GetZoneId(GetUnitZoneIndex("player"))].friendlyColor
@@ -178,8 +178,8 @@ function AOEHelper.createAddonMenu()
                 },
                 [4] = {
                     type = "slider",
-                    name = GetString(AOEHELPER_MENU_GENERAL_ALLY_BRIGHTNESS),
-                    tooltip = "the brightness of the AoEs that come from friendlies",
+                    name = GetString(AOEHELPER_MENU_GENERAL_ALLY_BRIGHTNESS_TEXT),
+                    tooltip = GetString(AOEHELPER_MENU_GENERAL_ALLY_BRIGHTNESS_TOOLTIP),
                     getFunc = function()
                         if AOEHelper.savedVariables.savedZones[GetZoneId(GetUnitZoneIndex("player"))] ~= nil then
                             return AOEHelper.savedVariables.savedZones[GetZoneId(GetUnitZoneIndex("player"))].friendlyBrightness
@@ -199,8 +199,8 @@ function AOEHelper.createAddonMenu()
                 },
                 [5] = {
                     type = "button",
-                    name = "load",
-                    tooltip = "load the currently saved settings from this zone",
+                    name = GetString(AOEHELPER_MENU_CURRENTZONE_BUTTON_LOAD_TEXT),
+                    tooltip = GetString(AOEHELPER_MENU_CURRENTZONE_BUTTON_LOAD_TOOLTIP),
                     func = function()
                         local zoneID = GetZoneId(GetUnitZoneIndex("player"))
                         AOEHelper.SetGameColors(AOEHelper.GetZoneColors(zoneID))
@@ -226,9 +226,9 @@ function AOEHelper.createAddonMenu()
                 },
                 [6] = {
                     type = "button",
-                    name = "delete settings",
-                    tooltip = "delete saved settings for this zone",
-                    warning = "this deletes your saved settings for this zone and they will fallback to deafault",
+                    name = GetString(AOEHELPER_MENU_CURRENTZONE_BUTTON_DELETE_TEXT),
+                    tooltip = GetString(AOEHELPER_MENU_CURRENTZONE_BUTTON_DELETE_TOOLTIP),
+                    warning = GetString(AOEHELPER_MENU_CURRENTZONE_BUTTON_DELETE_WARNING),
                     func = function()
                         local zoneID = GetZoneId(GetUnitZoneIndex("player"))
                         AOEHelper.DeleteZoneColors(zoneID)
@@ -239,13 +239,13 @@ function AOEHelper.createAddonMenu()
         },
         [11] = {
             type = "submenu",
-            name = "Default Colors",
-            tooltip = "Default Colors",
+            name = GetString(AOEHELPER_MENU_DEFAULT_SUBMENU_TEXT),
+            tooltip = GetString(AOEHELPER_MENU_DEFAULT_SUBMENU_TOOLTIP),
             controls = {
                 [1] = {
                     type = "colorpicker",
-                    name = GetString(AOEHELPER_MENU_GENERAL_ENEMY_COLOR),
-                    tooltip = "The color of the AoEs that come from enemys",
+                    name = GetString(AOEHELPER_MENU_GENERAL_ENEMY_COLOR_TEXT),
+                    tooltip = GetString(AOEHELPER_MENU_GENERAL_ENEMY_COLOR_TOOLTIP),
                     getFunc = function()
                         local c = AOEHelper.savedVariables.defaultColors.enemyColor
                         return tonumber("0x" .. c:sub(1, 2)) / 255, tonumber("0x" .. c:sub(3, 4)) / 255, tonumber("0x" .. c:sub(5, 6)) / 255
@@ -258,8 +258,8 @@ function AOEHelper.createAddonMenu()
                 },
                 [2] = {
                     type = "slider",
-                    name = GetString(AOEHELPER_MENU_GENERAL_ENEMY_BRIGHTNESS),
-                    tooltip = "the brightness of the AoEs that come from enemys",
+                    name = GetString(AOEHELPER_MENU_GENERAL_ENEMY_BRIGHTNESS_TEXT),
+                    tooltip = GetString(AOEHELPER_MENU_GENERAL_ENEMY_BRIGHTNESS_TOOLTIP),
                     getFunc = function() return AOEHelper.savedVariables.defaultColors.enemyBrightness end,
                     setFunc = function(value) AOEHelper.savedVariables.defaultColors.enemyBrightness = value end,
                     width = "half",
@@ -271,8 +271,8 @@ function AOEHelper.createAddonMenu()
                 },
                 [3] = {
                     type = "colorpicker",
-                    name = GetString(AOEHELPER_MENU_GENERAL_ALLY_COLOR),
-                    tooltip = "The color of the AoEs that come from friendlies",
+                    name = GetString(AOEHELPER_MENU_GENERAL_ALLY_COLOR_TEXT),
+                    tooltip = GetString(AOEHELPER_MENU_GENERAL_ALLY_COLOR_TOOLTIP),
                     getFunc = function()
                         local c = AOEHelper.savedVariables.defaultColors.friendlyColor
                         return tonumber("0x" .. c:sub(1, 2)) / 255, tonumber("0x" .. c:sub(3, 4)) / 255, tonumber("0x" .. c:sub(5, 6)) / 255
@@ -285,8 +285,8 @@ function AOEHelper.createAddonMenu()
                 },
                 [4] = {
                     type = "slider",
-                    name = GetString(AOEHELPER_MENU_GENERAL_ALLY_BRIGHTNESS),
-                    tooltip = "the brightness of the AoEs that come from friendlies",
+                    name = GetString(AOEHELPER_MENU_GENERAL_ALLY_BRIGHTNESS_TEXT),
+                    tooltip = GetString(AOEHELPER_MENU_GENERAL_ALLY_BRIGHTNESS_TOOLTIP),
                     getFunc = function() return AOEHelper.savedVariables.defaultColors.friendlyBrightness end,
                     setFunc = function(value) AOEHelper.savedVariables.defaultColors.friendlyBrightness = value end,
                     width = "half",
@@ -303,9 +303,9 @@ function AOEHelper.createAddonMenu()
                 },
                 [6] = {
                     type = "button",
-                    name = "save current",
-                    tooltip = "set color for the current Zone you are in",
-                    warning = "this overwrites you default colors with the current loaded ones globally",
+                    name = GetString(AOEHELPER_MENU_DEFAULT_BUTTON_SAVE_TEXT),
+                    tooltip = GetString(AOEHELPER_MENU_DEFAULT_BUTTON_SAVE_TOOLTIP),
+                    warning = GetString(AOEHELPER_MENU_DEFAULT_BUTTON_SAVE_WARNING),
                     func = function()
                         AOEHelper.savedVariables.defaultColors = AOEHelper.GetGameColors()
                     end,
