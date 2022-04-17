@@ -1,12 +1,5 @@
-- change color for each trial individeually
-- color picker with values
-- link in chat colors ( look at WizzardsWardrobe how to do links )
-- use preset from m00ny
+- link in chat colors ( look at WizardsWardrobe how to do links )
 - export
 - import
-- brighter AOEs
 - 3 preset colors
-
-onPlayerActivated hook
-
-IsUnitInDungeon
+- change colors for each boss individually (EVENT_BOSSES_CHANGED)
