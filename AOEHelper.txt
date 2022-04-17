@@ -16,6 +16,13 @@
 lang/en.lua
 lang/$(language).lua
 
-Data.lua
-Menu.lua
+modules/Data.lua
+modules/Util.lua
+
+logic/GameColors.lua
+logic/ZoneColors.lua
+logic/BossColors.lua
+
+modules/Menu.lua
+
 AOEHelper.lua
