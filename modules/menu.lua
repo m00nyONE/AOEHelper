@@ -129,7 +129,12 @@ function AOEHelper.createAddonMenu()
     -- submenu - current zone
     optionsTable[#optionsTable + 1] = {
         type = "submenu",
-        name = zo_strformat(GetString(AOEHELPER_MENU_CURRENTZONE_SUBMENU_TEXT),AOEHelper.filterName(GetUnitZone("player"))),
+        name = function()
+            if IsUnitInDungeon("player") then
+                return zo_strformat(GetString(AOEHELPER_MENU_CURRENTZONE_SUBMENU_TEXT), AOEHelper.filterName(GetUnitZone("player")))
+            end
+            return "ZONE"
+        end,
         tooltip = GetString(AOEHELPER_MENU_CURRENTZONE_SUBMENU_TOOLTIP),
         disabled = function() if AOEHelper.savedVariables.savedZones[GetZoneId(GetUnitZoneIndex("player"))] == nil then return true end return false end,
         controls = {
