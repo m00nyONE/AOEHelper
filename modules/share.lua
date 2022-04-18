@@ -1,3 +1,4 @@
+--[[
 local startLoadTime = GetGameTimeMilliseconds()
 
 AOEHelper = AOEHelper or {}
@@ -19,3 +20,4 @@ end
 
 local endLoadTime = GetGameTimeMilliseconds()
 AOEHelper.loadTime = AOEHelper.loadTime + (endLoadTime - startLoadTime)
+]]--

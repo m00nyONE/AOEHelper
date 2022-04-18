@@ -25,6 +25,15 @@ function AOEHelper.donate()
             200)
 end
 
+-- get boss name
+function AOEHelper.GetBossName()
+    local bossName = ""
+    for i = 1, MAX_BOSSES do
+        bossName = GetUnitName("boss" .. i)
+        if bossName ~= "" then break end
+    end
+    return bossName
+end
 
 local endLoadTime = GetGameTimeMilliseconds()
 AOEHelper.loadTime = AOEHelper.loadTime + (endLoadTime - startLoadTime)

@@ -55,5 +55,13 @@ function AOEHelper.SetDefaultColors(colors)
     end
 end
 
+function AOEHelper.LoadDefaultColors()
+    local colors = AOEHelper.savedVariables.defaultColors
+    SetSetting(SETTING_TYPE_COMBAT, COMBAT_SETTING_MONSTER_TELLS_ENEMY_COLOR, colors.enemyColor)
+    SetSetting(SETTING_TYPE_COMBAT, COMBAT_SETTING_MONSTER_TELLS_ENEMY_BRIGHTNESS, colors.enemyBrightness)
+    SetSetting(SETTING_TYPE_COMBAT, COMBAT_SETTING_MONSTER_TELLS_FRIENDLY_COLOR, colors.friendlyColor)
+    SetSetting(SETTING_TYPE_COMBAT, COMBAT_SETTING_MONSTER_TELLS_FRIENDLY_BRIGHTNESS, colors.friendlyBrightness)
+end
+
 local endLoadTime = GetGameTimeMilliseconds()
 AOEHelper.loadTime = AOEHelper.loadTime + (endLoadTime - startLoadTime)

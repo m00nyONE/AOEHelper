@@ -8,21 +8,24 @@
 ## Title: AOEHelper
 ## Description: Set up individual AOE Colors for each Trial & Dungeon
 ## Author: m00nyONE
-## Version: 1.0.0
-## AddOnVersion: 010000
+## Version: 1.1.0
+## AddOnVersion: 010100
 ## SavedVariables: AOEHelperVars
 ## DependsOn: LibAddonMenu-2.0 LibChatMessage>=105
 
 lang/en.lua
 lang/$(language).lua
 
-modules/Data.lua
-modules/Util.lua
+modules/data.lua
+modules/util.lua
 
 logic/GameColors.lua
 logic/ZoneColors.lua
 logic/BossColors.lua
 
-modules/Menu.lua
+modules/share.lua
+modules/cmd.lua
+
+modules/menu.lua
 
 AOEHelper.lua

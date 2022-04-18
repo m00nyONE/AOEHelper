@@ -1,3 +1,6 @@
+## 1.1.0
+- allow changing colors for every boss individually
+
 ## 1.0.1
 - internal code refactoring
 
