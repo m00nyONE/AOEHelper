@@ -2,4 +2,3 @@
 - export
 - import
 - 3 preset colors
-- change colors for each boss individually (EVENT_BOSSES_CHANGED)
