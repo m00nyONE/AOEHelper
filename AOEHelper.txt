@@ -8,8 +8,8 @@
 ## Title: AOEHelper
 ## Description: Set up individual AOE Colors for each Trial & Dungeon
 ## Author: m00nyONE
-## Version: 1.1.1
-## AddOnVersion: 010101
+## Version: 1.2.0
+## AddOnVersion: 010200
 ## SavedVariables: AOEHelperVars
 ## DependsOn: LibAddonMenu-2.0 LibChatMessage>=105
 

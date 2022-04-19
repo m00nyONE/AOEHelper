@@ -104,15 +104,6 @@ function AOEHelper.createAddonMenu()
         },
         [9] = {
             type = "button",
-            name = GetString(AOEHELPER_MENU_GENERAL_BUTTON_RESET_TEXT),
-            tooltip = GetString(AOEHELPER_MENU_GENERAL_BUTTON_RESET_TOOLTIP),
-            func = function()
-                AOEHelper.LoadDefaultColors()
-            end,
-            width = "half",
-        },
-        [10] = {
-            type = "button",
             name = GetString(AOEHELPER_MENU_GENERAL_BUTTON_SETFORCURRENTBOSS_TEXT),
             tooltip = GetString(AOEHELPER_MENU_GENERAL_BUTTON_SETFORCURRENTBOSS_TOOLTIP),
             func = function()
@@ -463,9 +454,13 @@ function AOEHelper.createAddonMenu()
                 max = 100,
             },
             [5] = {
-                type = "description",
-                name = " ",
-                width = "half"
+                type = "button",
+                name = GetString(AOEHELPER_MENU_DEFAULT_BUTTON_LOAD_TEXT),
+                tooltip = GetString(AOEHELPER_MENU_DEFAULT_BUTTON_LOAD_TOOLTIP),
+                func = function()
+                    AOEHelper.LoadDefaultColors()
+                end,
+                width = "half",
             },
             [6] = {
                 type = "button",

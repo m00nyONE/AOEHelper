@@ -1,3 +1,6 @@
+## 1.2.0
+- rearrange some buttons to make it more clear what they do
+
 ## 1.1.1
 - fixing some glitches
 

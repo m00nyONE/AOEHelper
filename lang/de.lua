@@ -13,8 +13,6 @@ local strings = {
 	AOEHELPER_MENU_GENERAL_ALLY_BRIGHTNESS_TOOLTIP = "Die Helligkeit der verbündeten AOEs",
 	AOEHELPER_MENU_GENERAL_BUTTON_SETFORCURRENTZONE_TEXT = "für Zone festlegen",
 	AOEHELPER_MENU_GENERAL_BUTTON_SETFORCURRENTZONE_TOOLTIP = "setzt die ausgewählen Farben für die aktuelle Zone fest und speichert diese",
-	AOEHELPER_MENU_GENERAL_BUTTON_RESET_TEXT = "zurücksetzen",
-	AOEHELPER_MENU_GENERAL_BUTTON_RESET_TOOLTIP = "Setzt die Farben auf Standard zurück",
 	AOEHELPER_MENU_GENERAL_BUTTON_SETFORCURRENTBOSS_TEXT = "für boss festlegen",
 	AOEHELPER_MENU_GENERAL_BUTTON_SETFORCURRENTBOSS_TOOLTIP = "Setzt die ausgewählten Farben für den aktuell Boss fest - Deaktiviert wenn kein Boss in Reichweite ist",
 
@@ -36,6 +34,8 @@ local strings = {
 
 	AOEHELPER_MENU_DEFAULT_SUBMENU_TEXT = "Standard Farben",
 	AOEHELPER_MENU_DEFAULT_SUBMENU_TOOLTIP = "Die Farben die Standardmäßig laden wenn keine speziellen für eine Zone gesetzt wurden.",
+	AOEHELPER_MENU_DEFAULT_BUTTON_LOAD_TEXT = "laden",
+	AOEHELPER_MENU_DEFAULT_BUTTON_LOAD_TOOLTIP = "Läd die Standardfarben",
 	AOEHELPER_MENU_DEFAULT_BUTTON_SAVE_TEXT = "aktuelle Farben speichern",
 	AOEHELPER_MENU_DEFAULT_BUTTON_SAVE_TOOLTIP = "Speichert die aktuellen Farben als Standardwerte",
 	AOEHELPER_MENU_DEFAULT_BUTTON_SAVE_WARNING = "dies überschreibt deine Standardfarben global mit denen die momentan aktiv sind",

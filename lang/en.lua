@@ -13,8 +13,6 @@ local strings = {
 	AOEHELPER_MENU_GENERAL_ALLY_BRIGHTNESS_TOOLTIP = "the brightness of friendly AOEs",
 	AOEHELPER_MENU_GENERAL_BUTTON_SETFORCURRENTZONE_TEXT = "set for Zone",
 	AOEHELPER_MENU_GENERAL_BUTTON_SETFORCURRENTZONE_TOOLTIP = "set the defined colors for the current zone you are in",
-	AOEHELPER_MENU_GENERAL_BUTTON_RESET_TEXT = "reset",
-	AOEHELPER_MENU_GENERAL_BUTTON_RESET_TOOLTIP = "reset the colors to default",
 	AOEHELPER_MENU_GENERAL_BUTTON_SETFORCURRENTBOSS_TEXT = "set for boss",
 	AOEHELPER_MENU_GENERAL_BUTTON_SETFORCURRENTBOSS_TOOLTIP = "set the defined colors for the current boss you are facing - deactivated when no boss in range",
 
@@ -36,6 +34,8 @@ local strings = {
 
 	AOEHELPER_MENU_DEFAULT_SUBMENU_TEXT = "Default Colors",
 	AOEHELPER_MENU_DEFAULT_SUBMENU_TOOLTIP = "Default Colors",
+	AOEHELPER_MENU_DEFAULT_BUTTON_LOAD_TEXT = "load",
+	AOEHELPER_MENU_DEFAULT_BUTTON_LOAD_TOOLTIP = "load the default colors",
 	AOEHELPER_MENU_DEFAULT_BUTTON_SAVE_TEXT = "save current",
 	AOEHELPER_MENU_DEFAULT_BUTTON_SAVE_TOOLTIP = "save the current colors globally as default",
 	AOEHELPER_MENU_DEFAULT_BUTTON_SAVE_WARNING = "this overwrites you default colors with the current loaded ones globally",
