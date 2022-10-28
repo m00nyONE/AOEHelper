@@ -1,3 +1,6 @@
+## 1.2.1
+- bump api to 101035 101034
+
 ## 1.2.0
 - rearrange some buttons to make it more clear what they do
 
