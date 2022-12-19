@@ -10,7 +10,7 @@ function AOEHelper.createAddonMenu()
         type = "panel",
         name = "AOEHelper",
         displayName = "AOEHelper",
-        author = "|cFFC0CBm00ny|r",
+        author = AOEHelper.author,
         version = AOEHelper.version,
         website = "https://www.esoui.com/downloads/fileinfo.php?id=3342",
         feedback = "https://github.com/m00nyONE/AOEHelper",
