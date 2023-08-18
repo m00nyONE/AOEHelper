@@ -1,5 +1,3 @@
-local startLoadTime = GetGameTimeMilliseconds()
-
 AOEHelper = AOEHelper or {}
 
 -- save colors for a boss to saved variables
@@ -57,7 +55,3 @@ function AOEHelper.DeleteBossColors(bossName)
     if AOEHelper.savedVariables.savedBosses[bossName] == nil then return end
     AOEHelper.savedVariables.savedBosses[bossName] = nil
 end
-
-
-local endLoadTime = GetGameTimeMilliseconds()
-AOEHelper.loadTime = AOEHelper.loadTime + (endLoadTime - startLoadTime)

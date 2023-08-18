@@ -1,5 +1,3 @@
-local startLoadTime = GetGameTimeMilliseconds()
-
 AOEHelper = AOEHelper or {}
 
 -- save colors for a zone to saved variables
@@ -58,6 +56,3 @@ function AOEHelper.DeleteZoneColors(zoneID)
     if AOEHelper.savedVariables.savedZones[zoneID] == nil then return end
     AOEHelper.savedVariables.savedZones[zoneID] = nil
 end
-
-local endLoadTime = GetGameTimeMilliseconds()
-AOEHelper.loadTime = AOEHelper.loadTime + (endLoadTime - startLoadTime)

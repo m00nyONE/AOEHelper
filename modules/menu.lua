@@ -475,17 +475,6 @@ function AOEHelper.createAddonMenu()
         }
     }
 
-    optionsTable[#optionsTable + 1] = {
-        type = "submenu",
-        name = "debug",
-        controls = {
-            [1] = {
-                type = "description",
-                text = function() return "Took " .. AOEHelper.loadTime .. "ms to load " .. AOEHelper.name end,
-            }
-        }
-    }
-
     LAM2:RegisterAddonPanel("AOEHelperMenu", panelData)
     LAM2:RegisterOptionControls("AOEHelperMenu", optionsTable)
 end

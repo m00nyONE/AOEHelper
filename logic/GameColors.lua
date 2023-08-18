@@ -1,5 +1,3 @@
-local startLoadTime = GetGameTimeMilliseconds()
-
 AOEHelper = AOEHelper or {}
 
 -- returns the current game colors
@@ -62,6 +60,3 @@ function AOEHelper.LoadDefaultColors()
     SetSetting(SETTING_TYPE_COMBAT, COMBAT_SETTING_MONSTER_TELLS_FRIENDLY_COLOR, colors.friendlyColor)
     SetSetting(SETTING_TYPE_COMBAT, COMBAT_SETTING_MONSTER_TELLS_FRIENDLY_BRIGHTNESS, colors.friendlyBrightness)
 end
-
-local endLoadTime = GetGameTimeMilliseconds()
-AOEHelper.loadTime = AOEHelper.loadTime + (endLoadTime - startLoadTime)

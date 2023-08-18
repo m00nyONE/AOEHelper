@@ -1,5 +1,3 @@
-local startLoadTime = GetGameTimeMilliseconds()
-
 AOEHelper = AOEHelper or {}
 
 
@@ -68,12 +66,6 @@ function AOEHelper.OnAddOnLoaded(_, addonName)
 
     EVENT_MANAGER:RegisterForEvent(AOEHelper.name .. "BossChange", EVENT_BOSSES_CHANGED, onBossChanged)
 
-        local endLoadTime2 = GetGameTimeMilliseconds()
-        AOEHelper.loadTime = AOEHelper.loadTime + (endLoadTime2 - startLoadTime2)
-    end
 end
 
 EVENT_MANAGER:RegisterForEvent(AOEHelper.name, EVENT_ADD_ON_LOADED, AOEHelper.OnAddOnLoaded)
-
-local endLoadTime = GetGameTimeMilliseconds()
-AOEHelper.loadTime = AOEHelper.loadTime + (endLoadTime - startLoadTime)

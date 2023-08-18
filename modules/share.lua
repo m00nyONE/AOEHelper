@@ -1,6 +1,4 @@
 --[[
-local startLoadTime = GetGameTimeMilliseconds()
-
 AOEHelper = AOEHelper or {}
 
 
@@ -16,8 +14,4 @@ function AOEHelper.serializeColors(colors)
     -- serialize to chat
 end
 
-
-
-local endLoadTime = GetGameTimeMilliseconds()
-AOEHelper.loadTime = AOEHelper.loadTime + (endLoadTime - startLoadTime)
 ]]--

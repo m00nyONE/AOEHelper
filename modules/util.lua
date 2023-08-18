@@ -1,4 +1,3 @@
-local startLoadTime = GetGameTimeMilliseconds()
 AOEHelper = AOEHelper or {}
 
 function AOEHelper.filterName(unfiltered)
@@ -34,6 +33,3 @@ function AOEHelper.GetBossName()
     end
     return bossName
 end
-
-local endLoadTime = GetGameTimeMilliseconds()
-AOEHelper.loadTime = AOEHelper.loadTime + (endLoadTime - startLoadTime)
