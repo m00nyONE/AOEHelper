@@ -1,10 +1,10 @@
 local strings = {
 	AOEHELPER_LOADED_COLORS = "loaded custom colors for <<1>>",
 
-    AOEHELPER_MENU_DESCRIPTION = "AOEColor allows you to customize enemy and ally AOE colors specific for each zone. YOu can customize every Trial and Dungeon.",
+    AOEHELPER_MENU_DESCRIPTION = "AOEHelper allows you to customize enemy and ally AOE colors specific for each zone. YOu can customize every Trial and Dungeon.",
 	AOEHELPER_MENU_CURRENT_HEADER_DESCRIPTION = "current colors",
 	AOEHELPER_MENU_GENERAL_ENEMY_COLOR_TEXT = "enemy color",
-	AOEHELPER_MENU_GENERAL_ENEMY_COLOR_TOOLTIP = "The color of the AoEs that come from enemys",
+	AOEHELPER_MENU_GENERAL_ENEMY_COLOR_TOOLTIP = "The color of the AOEs that come from enemys",
 	AOEHELPER_MENU_GENERAL_ENEMY_BRIGHTNESS_TEXT = "enemy brightness",
 	AOEHELPER_MENU_GENERAL_ENEMY_BRIGHTNESS_TOOLTIP = "the brightness of enemy AoEs",
 	AOEHELPER_MENU_GENERAL_ALLY_COLOR_TEXT = "friendly color",

@@ -1,7 +1,7 @@
 local strings = {
 	AOEHELPER_LOADED_COLORS = "Farben für <<1>> erfolgreich geladen",
 
-	AOEHELPER_MENU_DESCRIPTION = "AOEColor ermöglich das Speichern einzelner Farben für Gegner- und Verbündeten AOEs pro Zone. Dies gilt für Prüfungen und Dungeons",
+	AOEHELPER_MENU_DESCRIPTION = "AOEHelper ermöglich das Speichern einzelner Farben für Gegner- und Verbündeten AOEs pro Zone. Dies gilt für Prüfungen und Dungeons",
 	AOEHELPER_MENU_CURRENT_HEADER_DESCRIPTION = "aktuelle Farben",
 	AOEHELPER_MENU_GENERAL_ENEMY_COLOR_TEXT = "Farbe von Feinden",
 	AOEHELPER_MENU_GENERAL_ENEMY_COLOR_TOOLTIP = "Die Farbe der feindlichen AOEs",
