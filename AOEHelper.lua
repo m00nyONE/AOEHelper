@@ -26,6 +26,7 @@ end
 
 
 local function onPlayerActivated()
+    SetSetting(COMBAT_SETTING_MONSTER_TELLS_ENABLED, true)
     local zoneID = GetZoneId(GetUnitZoneIndex("player"))
     local zoneColors = AOEHelper.GetZoneColors(zoneID)
 
